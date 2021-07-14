@@ -139,8 +139,105 @@ section {
     cursor: pointer;
 }
 
+/* -----------------------
+------------gallery----------- 
+---------------------------*/
+#gallery {
+    background: #f8f8f8;
+    padding:50px 0;
+}
+.gallery-title {
+    text-align: center;
+    margin-bottom: 23px;
+    margin-top: 20px;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: black;
+}
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+}
+.image{
+    overflow: hidden;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    transition:.3s;
+}
+.image:hover img{
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
+/* final match */
+.final-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.final-desc,.final-video{
+    width:50%;
+}
+.final-desc h1 {
+    font-size: 48px;
+    margin-bottom: 14px;
+}
+.final-desc p{
+    color:#6C6C6C;
+    font-size: 16px;
+    margin-bottom:30px;
+    padding-right: 30px;
+}
 
+.final-video iframe{
+    width: 100%;
+    height: 300px;
+}
+/* footer design */
+footer{
+    text-align: center;
+    padding-top:40px;
+    padding-bottom:60px;
+}
+.footer-logo img{
+    width:483px;
+    height: 110px;
+}
+.social-icon {
+    display: inline-flex;
+    /* margin: auto; */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #e6e6e6;
+    margin: 0 3px;
+    font-size: 17px;
+    padding: 3px 7px;
+    transition:.4s;
+}
+.social-icon:first-child {
+    padding: 3px 10px;
+}
+.social-icon a {
+    text-decoration: none;
+    color: gray;
+    transition:.3s;
+}
+.social-icon:hover{
+   
+    background-color: rgb(49, 49, 49);
+}
+.social-icon:hover a{
+    color: #fff;
+}
+
+footer p{
+    font-size: 18px;
+    margin-top: 20px;
+}
 
 
 
@@ -174,6 +271,13 @@ section {
     }
     .highlights-info p{
         padding-right: 25px;
+    }
+    .gallery-images{
+        grid-template-columns: repeat(3,1fr);
+    }
+    /* for final video */
+    .final-desc h1 {
+        font-size:35px;
     }
 
 }
@@ -227,4 +331,22 @@ section {
         margin-top:40px;
     }
 
+    /* galllery section */
+    .gallery-images{
+        grid-template-columns: repeat(1,1fr);
+    }
+    /* final match */
+    .final-container{
+        flex-direction: column;
+    }
+    .final-desc,.final-video{
+        width: 100%;
+    }
+    .final-desc{
+        order: 2;
+    }
+    .final-video{
+        margin-bottom:40px;
+        order:1;
+    }
 }
